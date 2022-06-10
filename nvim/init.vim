@@ -71,7 +71,7 @@ let mapleader ="\<space>"
 
 noremap <leader>ev :vsplit ~/.config/nvim/init.vim <cr>
 
-nnoremap <c-p> :Files<cr>
+nnoremap <c-p> :Files<cr> "Atalho para files
 nnoremap <c-f> :Ag<space>
 nnoremap <leader>sv :source ~/.config/nvim/init.vim <cr>
 nnoremap <leader>n :NERDTreeFocus<CR>
