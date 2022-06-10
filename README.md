@@ -1,4 +1,4 @@
 # ws_customs
 Minhas customizações
 
-Para facilitar execute : wget -C /tmp/ https://github.com/wellesximenes/ws_customs/blob/main/confvim.py && python3 /tmp/confvim.py
+Para facilitar execute : wget -P /tmp/ https://raw.githubusercontent.com/wellesximenes/ws_customs/main/customs.py && python3 /tmp/customs.py
