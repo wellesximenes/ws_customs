@@ -12,7 +12,7 @@ def updatebash():
     if customold == True:
         os.system(
             'rm -rf /tmp/customs.py')
-    bashrcold = os.path.exists('~/.bashr')
+    bashrcold = os.path.exists('~/.bashrc')
         
     if bashrcold == True   
         os.system('mv ~/.bashrc ~/.bashrc.old')
