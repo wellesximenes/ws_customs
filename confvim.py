@@ -22,11 +22,11 @@ def updatenvim():
 
     os.system('sudo apt install cmake -y')
 
-    os.system('bash -c wget -P /tmp  https://github.com/wellesximenes/ws_customs/blob/main/nvim.tar.gz')
+    os.system(' wget -P /tmp  https://github.com/wellesximenes/ws_customs/blob/main/nvim.tar.gz')
 
     os.system('tar -xvzf /tmp/nvim.gz -C ~/.config/')
-    os.system('/home/welles/.local/share/nvim/plugged/YouCompleteMe/install.sh')
-    print('Quase no fim agora o PlugIntall no vim e prontoi')
+    os.system('/home/welles/.local/share/nvim/plugged/YouCompleteMe/install.py')
+    print('Quase no fim agora o PlugInstall no vim e pronto')
 
 def menu():
     opcao =0 
