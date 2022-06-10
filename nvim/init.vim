@@ -35,7 +35,7 @@ set incsearch        " Pesquisa incremental
 set ignorecase       " Ignorar maiusculo e minisculo na busca
 set smartcase        " Considere maiúsculas se houver um caractere maiúsculo
 set scrolloff=8      " Número mínimo de linhas a manter acima e abaixo do cursor
-set colorcolumn=100  " Desenha uma linha para manter-se ciente do tamanho da linha
+set colorcolumn=140  " Desenha uma linha para manter-se ciente do tamanho da linha
 set signcolumn=yes   " Adicione uma coluna à esquerda. Útil para linting
 set cmdheight=2      " Dê mais espaço para exibir mensagens
 set updatetime=100   " Tempo em milissegundos para considerar as mudanças
