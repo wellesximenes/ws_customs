@@ -22,7 +22,7 @@ call plug#end()
 "Configurações Globais """"""""""""""""""""""""""""""""""""""""""""""
 
 
-set syntax on        " Habilitar High Light
+set syntax=on        " Habilitar High Light
 set nu               " Habilitar Exibição de numeros
 set tabstop=4        " Habilitando 4 espaços por tab
 set softtabstop=4    " Mostrar guia existente com 4 espaços de largura
