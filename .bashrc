@@ -10,11 +10,12 @@ export OSH=~/.oh-my-bash
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
 OSH_THEME="random"
-alias vim='nvim'
+alias v='nvim'
 alias entrargit='cd ~/git'
 alias psgrep='ps -aux |grep $1'
 alias hgrep='history |grep $1'
 alias vimconf='nvim ~/.config/nvim/init.vim'
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
