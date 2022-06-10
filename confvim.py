@@ -4,9 +4,21 @@ import time
 print ('Bem vindo ao customizador do vim e bash')
 
 time.sleep(1)
+def updatebash()
+    print('Instalando o OH-MY-BASH')
 
-print('Instalando o OH-MY-BASH')
+    os.system('bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"')
 
-os.system('bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"')
+    os.system('wget -P ~/ https://raw.githubusercontent.com/wellesximenes/ws_customs/main/.bashrc ')
 
-os.system('wget -P ~/  ')
+    print('OH-MY-BASH instalado!!!!!')
+
+
+def updatenvim()
+    print('Configurando o nvim')
+
+    print('Instalando pacotes necessarios')
+    time.sleep(2)
+
+    os.system('sudo apt install cmake -y')
+
