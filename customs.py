@@ -6,7 +6,13 @@ print ('Bem vindo ao customizador do vim e bash')
 time.sleep(1)
 def updatebash():
     print('Instalando o OH-MY-BASH')
+ 
+    customold = os.path.exists('/tmp/customs.py')
 
+    if customold == True:
+        os.system(
+            'rm -rf /tmp/customs.py')
+    
     os.system('bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"')
 
     os.system('wget -O ~/.bashrc https://raw.githubusercontent.com/wellesximenes/ws_customs/main/.bashrc ')
@@ -19,12 +25,17 @@ def updatenvim():
 
     print('Instalando pacotes necessarios')
     time.sleep(2)
+    customold = os.path.exists('/tmp/customs.py')
 
+    if customold == True:
+        os.system(
+            'rm -rf /tmp/customs.py')
+    
     os.system('sudo apt install cmake -y')
 
     os.system(' wget -P /tmp  https://github.com/wellesximenes/ws_customs/blob/main/nvim.tar.gz')
 
-    os.system('tar -xvzf /tmp/nvim.gz -C ~/.config/')
+    os.system('tar -xvzf /tmp/nvim.tar.gz -C ~/.config/')
 #    os.system('/home/welles/.local/share/nvim/plugged/YouCompleteMe/install.py')
     print('Quase no fim agora o PlugInstall no vim e compile o YouCompleteMe')
     print('Comando: ~/.local/share/nvim/plugged/YouCompleteMe/install.py')
