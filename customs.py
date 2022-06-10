@@ -25,9 +25,9 @@ def updatenvim():
     os.system(' wget -P /tmp  https://github.com/wellesximenes/ws_customs/blob/main/nvim.tar.gz')
 
     os.system('tar -xvzf /tmp/nvim.gz -C ~/.config/')
-    os.system('/home/welles/.local/share/nvim/plugged/YouCompleteMe/install.py')
-    print('Quase no fim agora o PlugInstall no vim e pronto')
-
+#    os.system('/home/welles/.local/share/nvim/plugged/YouCompleteMe/install.py')
+    print('Quase no fim agora o PlugInstall no vim e compile o YouCompleteMe')
+    print('Comando: ~/.local/share/nvim/plugged/YouCompleteMe/install.py')
 def menu():
     opcao =0 
     while opcao !=5:
