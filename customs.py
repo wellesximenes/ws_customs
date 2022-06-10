@@ -37,7 +37,7 @@ def updatenvim():
             os.system('rm -rf /tmp/nvim.tar.xz')
 
     os.system(' wget -P /tmp/   https://github.com/wellesximenes/ws_customs/raw/main/nvim.tar.xz')
-
+    os.system ('sudo apt install cmake  python3.9-dev build-essential -y')
     os.system('tar -xvf /tmp/nvim.tar.xz -C ~/.config/')
 #    os.system('/home/welles/.local/share/nvim/plugged/YouCompleteMe/install.py')
     print('Quase no fim agora o PlugInstall no vim e compile o YouCompleteMe')
