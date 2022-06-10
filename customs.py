@@ -38,7 +38,6 @@ def updatenvim():
         os.system(
             'rm -rf /tmp/customs.py')
     
-    os.system('sudo apt install cmake -y')
     nvimold = os.path.exists('/tmp/nvim.tar.xz')
     if nvimold  == True:
             print ('Removendo caches velhos')
@@ -51,9 +50,13 @@ def updatenvim():
         os.system('mv ~/.config/nvim ~/nvim.old')
     os.system(" curl -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/wellesximenes/ws_customs/main/nvim.tar.xz -o /tmp/nvim.tar.xz")
     os.system('tar -xvf /tmp/nvim.tar.xz -C ~/.config/')
-#    os.system('/home/welles/.local/share/nvim/plugged/YouCompleteMe/install.py')
-    print('Quase no fim agora o PlugInstall no vim e compile o YouCompleteMe')
-#    print('Comando: ~/.local/share/nvim/plugged/YouCompleteMe/install.py')
+    os.system("curl -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/wellesximenes/ws_customs/main/nvim/init.vim -o ~/.config/init.vim")
+
+    print('')
+    print('Quase no fim agora execute no vim  PlugInstall !!!')
+
+    print('')
+
 def menu():
     opcao =0 
     while opcao !=5:
