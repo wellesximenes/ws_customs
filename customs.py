@@ -21,7 +21,7 @@ def updatebash():
     os.system('bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"')
 
 
-    os.system('curl  -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/wellesximenes/ws_customs/main/.bashrc -o ~/.bashrc ')
+    os.system("curl  -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/wellesximenes/ws_customs/main/.bashrc -o ~/.bashrc ")
 
     print('OH-MY-BASH instalado!!!!!')
 
@@ -31,6 +31,7 @@ def updatenvim():
 
     print('Instalando pacotes necessarios')
     time.sleep(2)
+    
     customold = os.path.exists('/tmp/customs.py')
 
     if customold == True:
@@ -40,10 +41,15 @@ def updatenvim():
     os.system('sudo apt install cmake -y')
     nvimold = os.path.exists('/tmp/nvim.tar.xz')
     if nvimold  == True:
+            print ('Removendo caches velhos')
+            time.sleep(2)
             os.system('rm -rf /tmp/nvim.tar.xz')
+    nvimconfold  =  os.path.exists('~/.config/nvim')
 
-    os.system(' wget -P /tmp/   https://github.com/wellesximenes/ws_customs/raw/main/nvim.tar.xz')
-    os.system ('sudo apt install cmake  python3.9-dev build-essential -y')
+    if nvimconfold == True:
+        print ('Movendo conf do nvim para ~/nvim.old')
+        os.system('mv ~/.config/nvim ~/nvim.old')
+    os.system(" curl -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/wellesximenes/ws_customs/main/nvim.tar.xz -o /tmp/nvim.tar.xz")
     os.system('tar -xvf /tmp/nvim.tar.xz -C ~/.config/')
 #    os.system('/home/welles/.local/share/nvim/plugged/YouCompleteMe/install.py')
     print('Quase no fim agora o PlugInstall no vim e compile o YouCompleteMe')
