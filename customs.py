@@ -9,7 +9,7 @@ def updatebash():
 
     os.system('bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"')
 
-    os.system('wget -P ~/ https://raw.githubusercontent.com/wellesximenes/ws_customs/main/.bashrc ')
+    os.system('wget -O ~/.bashrc https://raw.githubusercontent.com/wellesximenes/ws_customs/main/.bashrc ')
 
     print('OH-MY-BASH instalado!!!!!')
 
