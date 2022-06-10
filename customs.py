@@ -14,7 +14,7 @@ def updatebash():
             'rm -rf /tmp/customs.py')
     bashrcold = os.path.exists('~/.bashrc')
         
-    if bashrcold == True   
+    if bashrcold == True:   
         print ('Movendo conf do bash para ~/.bashrc.old')
         os.system('mv ~/.bashrc ~/.bashrc.old')
         
