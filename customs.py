@@ -12,7 +12,11 @@ def updatebash():
     if customold == True:
         os.system(
             'rm -rf /tmp/customs.py')
-    
+    bashrcold = os.path.exists('~/.bashr')
+        
+    if bashrcold == True   
+        os.system('mv ~/.bashrc ~/.bashrc.old')
+        
     os.system('bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"')
 
     os.system('wget -P ~/ https://raw.githubusercontent.com/wellesximenes/ws_customs/main/.bashrc ')
