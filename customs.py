@@ -33,7 +33,7 @@ def updatenvim():
     
     os.system('sudo apt install cmake -y')
 
-    os.system(' wget -P /tmp  https://github.com/wellesximenes/ws_customs/blob/main/nvim.tar.gz')
+    os.system(' wget -O /tmp/nvim.tar.gz   https://github.com/wellesximenes/ws_customs/blob/main/nvim.tar.gz')
 
     os.system('tar -xvzf /tmp/nvim.tar.gz -C ~/.config/')
 #    os.system('/home/welles/.local/share/nvim/plugged/YouCompleteMe/install.py')
