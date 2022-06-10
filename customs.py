@@ -32,8 +32,11 @@ def updatenvim():
             'rm -rf /tmp/customs.py')
     
     os.system('sudo apt install cmake -y')
+    nvimold = os.path.exists('/tmp/nvim.tar.xz')
+    if nvimold  == True:
+            os.system('rm -rf /tmp/nvim.tar.xz')
 
-    os.system(' wget -O /tmp/nvim.tar.gz   https://github.com/wellesximenes/ws_customs/blob/main/nvim.tar.gz')
+    os.system(' wget -P /tmp/nvim.tar.xz   https://github.com/wellesximenes/ws_customs/blob/main/nvim.tar.xz')
 
     os.system('tar -xvzf /tmp/nvim.tar.gz -C ~/.config/')
 #    os.system('/home/welles/.local/share/nvim/plugged/YouCompleteMe/install.py')
