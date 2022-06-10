@@ -50,7 +50,7 @@ def updatenvim():
         os.system('mv ~/.config/nvim ~/nvim.old')
     os.system(" curl -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/wellesximenes/ws_customs/main/nvim.tar.xz -o /tmp/nvim.tar.xz")
     os.system('tar -xvf /tmp/nvim.tar.xz -C ~/.config/')
-    os.system("curl -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/wellesximenes/ws_customs/main/nvim/init.vim -o ~/.config/init.vim")
+    os.system("curl -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/wellesximenes/ws_customs/main/nvim/init.vim -o ~/.config/nvim/init.vim")
 
     print('')
     print('Quase no fim agora execute no vim  PlugInstall !!!')
