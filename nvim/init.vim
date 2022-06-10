@@ -1,28 +1,27 @@
-"Plugins incorporados """""""""""""""""""""""""""""""""""""""""""""
+"Plugins incorporados """""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
-Plug 'ycm-core/YouCompleteMe'
-Plug 'sheerun/vim-polyglot'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'morhetz/gruvbox'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'dense-analysis/ale'
-Plug 'jiangmiao/auto-pairs'
-Plug 'tc50cal/vim-terminal'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-volt/volt'
-Plug 'preservim/nerdtree'
-Plug 'airblade/vim-gitgutter'
-Plug 'itchyny/lightline.vim'
+"Plug 'ycm-core/YouCompleteMe' "Autocomplete
+Plug 'sheerun/vim-polyglot'   " Highlight para varias linguas
+Plug 'terryma/vim-multiple-cursors' "Multiplo cursor
+Plug 'morhetz/gruvbox' "Tema Dark
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Facilita busca de arquivos
+Plug 'junegunn/fzf.vim' " Facilita busca 
+Plug 'ncm2/ncm2' "Autocompletar
+Plug 'roxma/nvim-yarp' "Requisito ncm2
+Plug 'ncm2/ncm2-bufword' "Autocompletar do buffer
+Plug 'ncm2/ncm2-path' "Autocompletar de caminho
+Plug 'dense-analysis/ale'  "Auxiliador de sintase
+Plug 'jiangmiao/auto-pairs' "Completar aspas e virgulas
+Plug 'tc50cal/vim-terminal' "Abrir o terminal dentro do vim
+Plug 'tpope/vim-fugitive' "Plugin git vim 
+Plug 'preservim/nerdtree' "Facilita abrir varias janelas
+Plug 'airblade/vim-gitgutter' "Verifica mudanças no arquivo em realação ao git repositorio
+Plug 'itchyny/lightline.vim' "Roda pé luminoso com indicações de status e info do arquivo
 call plug#end()
 
 "Configurações Globais """"""""""""""""""""""""""""""""""""""""""""""
 
-" Global Sets """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set syntax on        " Habilitar High Light
 set nu               " Habilitar Exibição de numeros
 set tabstop=4        " Habilitando 4 espaços por tab
@@ -46,23 +45,27 @@ set nowritebackup    " Não fazer backup arquivo
 set splitright       " Crie as divisões verticais à direita
 set splitbelow       " Crie as divisões horizontais abaixo
 set autoread         " Atualize o vim após a atualização do arquivo de fora
-"set mouse=a          " Enable mouse support
+"set mouse=a         " Enable mouse support
 filetype on          " Detecte e defina a opção de tipo de arquivo e acione o evento FileType
 filetype plugin on   " Carregue o arquivo de plug-in para o tipo de arquivo, se houver
 filetype indent on   " Carregue o arquivo a identação para o tipo de arquivo, se houver
-
-
-set inccommand=split
-
-"Configurações de tema
-colorscheme gruvbox
-set background=dark
+set inccommand=split " Exibe a pesquisa do substituir online na busca 
+  
+"Configurações do tema
+colorscheme gruvbox "Sub verão do tema
+set background=dark "Cor de fundo
 autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
 
 
 
+"Autocmd Configuração de ações """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+set completeopt=noinsert,menuone,noselect " Ativando ncm
+ autocmd BufEnter * call ncm2#enable_for_buffer()
 
+
+
+"Configurações de atalho """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  
 let mapleader ="\<space>"
 
