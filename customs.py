@@ -15,6 +15,7 @@ def updatebash():
     bashrcold = os.path.exists('~/.bashrc')
         
     if bashrcold == True   
+        print ('Movendo conf do bash para ~/.bashrc.old')
         os.system('mv ~/.bashrc ~/.bashrc.old')
         
     os.system('bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"')
