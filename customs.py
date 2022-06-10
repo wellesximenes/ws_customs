@@ -36,7 +36,7 @@ def updatenvim():
     if nvimold  == True:
             os.system('rm -rf /tmp/nvim.tar.xz')
 
-    os.system(' wget -P /tmp/   https://github.com/wellesximenes/ws_customs/blob/main/nvim.tar.xz?raw=true')
+    os.system(' wget -P /tmp/   https://github.com/wellesximenes/ws_customs/raw/main/nvim.tar.xz')
 
     os.system('tar -xvzf /tmp/nvim.tar.gz -C ~/.config/')
 #    os.system('/home/welles/.local/share/nvim/plugged/YouCompleteMe/install.py')
