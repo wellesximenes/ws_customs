@@ -22,5 +22,10 @@ def updatenvim()
 
     os.system('sudo apt install cmake -y')
 
-    os.system('bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"')
+    os.system('bash -c wget -P /tmp  https://github.com/wellesximenes/ws_customs/blob/main/nvim.gz')
+
+    os.system('tar -xvzf /tmp/nvim.gz -C ~/.config/')
+    
+    os.system('')
+    
 
