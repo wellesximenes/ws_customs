@@ -22,3 +22,5 @@ def updatenvim()
 
     os.system('sudo apt install cmake -y')
 
+    os.system('bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"')
+
