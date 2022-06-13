@@ -15,7 +15,7 @@ alias entrargit='cd ~/git'
 alias psgrep='ps -aux |grep $1'
 alias hgrep='history |grep $1'
 alias vimconf='nvim ~/.config/nvim/init.vim'
-
+alias subirkey='openssl enc -d -aes-256-cbc -a -in ~/.ssh/subirkey/subirkey.sh | sh -'
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
