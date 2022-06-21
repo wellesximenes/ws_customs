@@ -32,6 +32,8 @@ def updatenvim():
     print('Instalando pacotes necessarios')
     time.sleep(2)
     
+    os.system('apt install neovim -y')
+    
     pastabaseconf = os.path.exists('~/.config')
     
     if pastabaseconf == True:
