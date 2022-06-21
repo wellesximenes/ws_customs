@@ -29,10 +29,11 @@ def updatebash():
 def updatenvim():
     print('Configurando o nvim')
 
-    print('Instalando pacotes necessarios')
+    print('Instalando pacotes neovim')
+    os.system('apt install neovim -y')
     time.sleep(2)
     
-    os.system('apt install neovim -y')
+    
     
     pastabaseconf = os.path.exists('~/.config')
     
