@@ -32,6 +32,14 @@ def updatenvim():
     print('Instalando pacotes necessarios')
     time.sleep(2)
     
+    pastabaseconf = os.path.exists('~/.config')
+    
+    if pastabaseconf == True:
+        print ('Pasta do conf existe')
+    else:
+        os.system('mkdir -p ~/.config')
+    
+    
     customold = os.path.exists('/tmp/customs.py')
 
     if customold == True:
