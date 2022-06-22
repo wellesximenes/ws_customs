@@ -6,6 +6,7 @@ print ('Bem vindo ao customizador do vim e bash')
 time.sleep(1)
 def updatebash():
     print('Instalando o OH-MY-BASH')
+    os.system('apt update -y && apt install curl git -y')
 
     customold = os.path.exists('/tmp/customs.py')
 
