@@ -1,27 +1,30 @@
-"Plugins incorporados """""""""""""""""""""""""""""""""""""""""""""""""""""""
+"c clugins incorporados """""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
-"Plug 'ycm-core/YouCompleteMe' "Autocomplete
+Plug 'ryanoasis/vim-devicons' "Ativando icones
+Plug 'ycm-core/YouCompleteMe' "Autocomplete
 Plug 'sheerun/vim-polyglot'   " Highlight para varias linguas
 Plug 'terryma/vim-multiple-cursors' "Multiplo cursor
 Plug 'morhetz/gruvbox' "Tema Dark
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Facilita busca de arquivos
-Plug 'junegunn/fzf.vim' " Facilita busca 
-Plug 'ncm2/ncm2' "Autocompletar
-Plug 'roxma/nvim-yarp' "Requisito ncm2
-Plug 'ncm2/ncm2-bufword' "Autocompletar do buffer
-Plug 'ncm2/ncm2-path' "Autocompletar de caminho
+Plug 'junegunn/fzf.vim' " Facilita busca
+"Plug 'ncm2/ncm2' "Autocompletar
+"Plug 'roxma/nvim-yarp' "Requisito ncm2
+"Plug 'ncm2/ncm2-bufword' "Autocompletar do buffer
+"Plug 'ncm2/ncm2-path' "Autocompletar de caminho
 Plug 'dense-analysis/ale'  "Auxiliador de sintase
 Plug 'jiangmiao/auto-pairs' "Completar aspas e virgulas
 Plug 'tc50cal/vim-terminal' "Abrir o terminal dentro do vim
-Plug 'tpope/vim-fugitive' "Plugin git vim 
+Plug 'tpope/vim-fugitive' "Plugin git vim
 Plug 'preservim/nerdtree' "Facilita abrir varias janelas
 Plug 'airblade/vim-gitgutter' "Verifica mudanças no arquivo em realação ao git repositorio
-Plug 'itchyny/lightline.vim' "Roda pé luminoso com indicações de status e info do arquivo
+"Plug 'itchyny/lightline.vim' "Roda pé luminoso com indicações de status e info do arquivo
+Plug 'vim-airline/vim-airline' "Barra inferior luminosa
 call plug#end()
 
 "Configurações Globais """"""""""""""""""""""""""""""""""""""""""""""
-
-
+set confirm          " Perguntar antes de sair
+set wildmenu         " Menu superior
+set autoindent       " Auto identação
 set syntax=on        " Habilitar High Light
 set nu               " Habilitar Exibição de numeros
 set tabstop=4        " Habilitando 4 espaços por tab
@@ -49,32 +52,62 @@ set autoread         " Atualize o vim após a atualização do arquivo de fora
 filetype on          " Detecte e defina a opção de tipo de arquivo e acione o evento FileType
 filetype plugin on   " Carregue o arquivo de plug-in para o tipo de arquivo, se houver
 filetype indent on   " Carregue o arquivo a identação para o tipo de arquivo, se houver
-set inccommand=split " Exibe a pesquisa do substituir online na busca 
-  
+set inccommand=split " Exibe a pesquisa do substituir online na busca
+
 "Configurações do tema
 colorscheme gruvbox "Sub verão do tema
 set background=dark "Cor de fundo
-autocmd BufEnter * call ncm2#enable_for_buffer()
-set completeopt=noinsert,menuone,noselect
+"Ativação ncm
+"autocmd BufEnter * call ncm2#enable_for_buffer()
+"set completeopt=noinsert,menuone,noselect
+
+
+"Configurações do airline superior
+let g:airline#extensions#tabline#enabled = 1
+
+" ALE """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+let g:ale_linters = {
+\	'python': ['flake8', 'pyright', 'bandit'],
+\}
+let g:ale_fixers = {
+\   '*': ['trim_whitespace'],
+\}
+
+let g:ale_fix_on_save = 1
 
 
 
-"Autocmd Configuração de ações """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
-set completeopt=noinsert,menuone,noselect " Ativando ncm
- autocmd BufEnter * call ncm2#enable_for_buffer()
+"Autocmd Configuração de ações """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"set completeopt=noinsert,menuone,noselect " Ativando ncm
+"autocmd BufEnter * call ncm2#enable_for_buffer()
 
 
 
 "Configurações de atalho """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- 
+"Atalho sair do vim
+noremap q :quit<cr>
+"Atalho para salvar
+noremap <C-s> :w<cr>
+"Definido minha principal tecla para chamar atalhos"
 let mapleader ="\<space>"
-
-noremap <leader>ev :vsplit ~/.config/nvim/init.vim <cr>
-
-nnoremap <c-p> :Files<cr> "Atalho para files
-nnoremap <c-f> :Ag<space>
-nnoremap <leader>sv :source ~/.config/nvim/init.vim <cr>
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+"Abrir arquivo de configuração do nvim"
+noremap <leader>c :vsplit ~/.config/nvim/init.vim <cr>
+"Exibir arquivo e preview de arquivos
+noremap <c-p> :Files<cr>
+"Em Estudo
+noremap <c-f> :Ag<space>
+"Carregar conf do nvim novamente
+noremap <leader>l :source ~/.config/nvim/init.vim <cr>
+"Abrir nerdtree
+noremap <leader>n :NERDTreeFocus<CR>
+"Direções nos splits
+"Esquerda
+map <C-h> <C-w>h
+"Baixo
+map <C-j> <C-w>j
+"Cima
+map <C-k> <C-w>k
+"Direita
+map <C-l> <C-w>l

@@ -33,6 +33,9 @@ def updatenvim():
     print('Instalando pacotes neovim')
     os.system('apt install neovim -y')
     time.sleep(2)
+<<<<<<< HEAD
+
+=======
     
     
     
@@ -44,12 +47,13 @@ def updatenvim():
         os.system('mkdir -p ~/.config')
     
     
+>>>>>>> c711cc62103cdd327c0cad1dbe50aed9d7fa87b5
     customold = os.path.exists('/tmp/customs.py')
 
     if customold == True:
         os.system(
             'rm -rf /tmp/customs.py')
-    
+
     nvimold = os.path.exists('/tmp/nvim.tar.xz')
     if nvimold  == True:
             print ('Removendo caches velhos')
@@ -64,19 +68,33 @@ def updatenvim():
     os.system('tar -xvf /tmp/nvim.tar.xz -C ~/.config/')
     os.system("curl -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/wellesximenes/ws_customs/main/nvim/init.vim -o ~/.config/nvim/init.vim")
 
+    print('Preparando para o YouCoplete')
+    os.system(' apt install build-essential cmake vim-nox python3-dev')
+    os.system('nvim -c "PlugInstall"')
+#    os.system('apt install mono-complete golang nodejs default-jdk npm')
+
+#    youcompleteexist = os.path.exists('~/.local/share/nvim/plugged/YouCompleteMe')
+#    if nvimold  == True:
+#            print ('Removendo old Youcomplete')
+#            time.sleep(2)
+#            os.system('rm -rf ~/.local/share/nvim/plugged/YouCompleteMe')
+
+ #   os.system('cd ~/.local/share/nvim/plugged && git clone https://github.com/ycm-core/YouCompleteMe && cd ~/.local/share/nvim/plugged/YouCompleteMe && git submodule update --init --recursive && python3 ~/.local/share/nvim/plugged/YouCompleteMe/install.py    ')
+
     print('')
     print('Quase no fim agora execute no vim  PlugInstall !!!')
-
+    print(' Compile o Youcomplete~/.local/share/nvim/plugged/YouCompleteMe/install.py ')
     print('')
 
 def menu():
-    opcao =0 
+    opcao =0
     while opcao !=5:
         print('''
                 ------Menu de servidores------
 
                 [1] Instalar e ataualizar o OH-MY-BASH
                 [2] Instalar e atualizar o nvim
+                [3] Instalar Tudo!!!
                 [0] Para sair      ''')
         print('')
         opcao = int(input('Escolha uma opção: '))
@@ -84,9 +102,12 @@ def menu():
             updatebash()
         elif opcao == 2:
             updatenvim()
+        elif opcao == 3:
+            updatenvim()
+            updatenvim()    
         else:
             print('BYEEE')
             opcao =5
-menu()            
+menu()
 
 
