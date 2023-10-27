@@ -82,6 +82,10 @@ let g:ale_fix_on_save = 1
 "set completeopt=noinsert,menuone,noselect " Ativando ncm
 "autocmd BufEnter * call ncm2#enable_for_buffer()
 
+"Cabeçalho python
+
+autocmd BufNewFile *.py 0put =\"#!/usr/bin/python\<nl>\"|$
+
 
 
 "Configurações de atalho """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
