@@ -33,9 +33,6 @@ def updatenvim():
     print('Instalando pacotes neovim')
     os.system('apt install neovim -y')
     time.sleep(2)
-<<<<<<< HEAD
-
-=======
     
     
     
@@ -46,8 +43,6 @@ def updatenvim():
     else:
         os.system('mkdir -p ~/.config')
     
-    
->>>>>>> c711cc62103cdd327c0cad1dbe50aed9d7fa87b5
     customold = os.path.exists('/tmp/customs.py')
 
     if customold == True:
