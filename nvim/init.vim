@@ -1,7 +1,6 @@
 "c clugins incorporados """""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
 Plug 'ryanoasis/vim-devicons' "Ativando icones
-Plug 'ycm-core/YouCompleteMe' "Autocomplete
 Plug 'sheerun/vim-polyglot'   " Highlight para varias linguas
 Plug 'terryma/vim-multiple-cursors' "Multiplo cursor
 Plug 'morhetz/gruvbox' "Tema Dark
