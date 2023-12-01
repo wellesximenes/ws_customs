@@ -62,7 +62,8 @@ def updatenvim():
     os.system(" curl -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/wellesximenes/ws_customs/main/nvim.tar.xz -o /tmp/nvim.tar.xz")
     os.system('tar -xvf /tmp/nvim.tar.xz -C ~/.config/')
     os.system("curl -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/wellesximenes/ws_customs/main/nvim/init.vim -o ~/.config/nvim/init.vim")
-
+    os.system("curl -sL install-node.vercel.app/lts | bash")
+    
     print('Preparando para o YouCoplete')
     os.system(' apt install build-essential cmake vim-nox python3-dev')
     os.system('nvim -c "PlugInstall"')
@@ -78,7 +79,7 @@ def updatenvim():
 
     print('')
     print('Quase no fim agora execute no vim  PlugInstall !!!')
-    print(' Compile o Youcomplete~/.local/share/nvim/plugged/YouCompleteMe/install.py ')
+    print('rodar  CocInstall coc-pyright ')
     print('')
 
 def menu():
