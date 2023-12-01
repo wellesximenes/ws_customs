@@ -1,5 +1,6 @@
 "c clugins incorporados """""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons' "Ativando icones
 Plug 'sheerun/vim-polyglot'   " Highlight para varias linguas
 Plug 'terryma/vim-multiple-cursors' "Multiplo cursor
